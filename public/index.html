@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main">
+        <div class="name">
+            <span><i class="fa-regular fa-user"></i></span>
+            <input 
+            type="text" 
+            id="name-input" 
+            class="name-input" 
+            value="anonymous"
+            maxlength="20">
+        </div>
+        <ul class="message-container" id="message-container">
+            <li class="message-left">
+                <p class="message">
+                    Hey Lets Start the chat
+                    <span> Mimi ⚪ 26 july 10:40</span>
+                </p>
+            </li>
+            <li class="message-right">
+                <p class="message">
+                    Yeah Sure!
+                    <span>Aaliya ⚪ 26 july 10:40</span>
+                </p>
+            </li>
+            <li class="message-feedback">
+                <p class="feedback" id="feedback">
+                    <!-- killer is typing a message -->
+                </p>
+            </li>
+        </ul>
+
+        <form action="" class="message-form" id="message-form">
+            <input type="text" name="text" id="message-input" class="message-input">
+            <div class="v-divider"></div>
+            <button type="submit" class="send-button">send <span><i class="fa-solid fa-paper-plane"></i></span></button>
+        </form>
+
+        <h3 class="clients-total" id="clients-total">Total Clients: 2</h3>
+    </div>
+
+
+    <!--  client script socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- main.js file -->
+    <script src="main.js"></script>
+    <!-- moment.js to fpormat date -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js" integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
